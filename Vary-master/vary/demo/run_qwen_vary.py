@@ -118,7 +118,7 @@ def eval_model(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-name", type=str, default="facebook/opt-350m")
+    parser.add_argument("--model-name", type=str, default="/data/tanfulun/cache/vary/vary_toy")
     parser.add_argument("--image-file", type=str, required=True)
     parser.add_argument("--conv-mode", type=str, default=None)
     args = parser.parse_args()
