@@ -40,8 +40,8 @@ def eval_model(args):
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
-    model = varyQwenForCausalLM.from_pretrained(model_name, low_cpu_mem_usage=True, device_map='cuda', trust_remote_code=True)
-
+    # model = varyQwenForCausalLM.from_pretrained(model_name, low_cpu_mem_usage=True, device_map='cuda', trust_remote_code=True)
+    model = varyQwenForCausalLM.from_pretrained(model_name, low_cpu_mem_usage=True, trust_remote_code=True)
 
     model.to(device='cuda',  dtype=torch.bfloat16)
 
