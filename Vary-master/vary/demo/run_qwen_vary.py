@@ -46,7 +46,7 @@ def eval_model(args):
     model.to(device='cuda',  dtype=torch.bfloat16)
 
 
-    image_processor = CLIPImageProcessor.from_pretrained("/data/tanfulun/cache/vit-large-patch14/vit-large-patch14/", torch_dtype=torch.float16)
+    image_processor = CLIPImageProcessor.from_pretrained("/data/tanfl/cache/vit-large-patch14/vit-large-patch14/", torch_dtype=torch.float16)
 
     image_processor_high = BlipImageEvalProcessor(image_size=1024)
 
@@ -118,7 +118,7 @@ def eval_model(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-name", type=str, default="/data/tanfulun/cache/vary/vary_toy")
+    parser.add_argument("--model-name", type=str, default="/data/tanfl/cache/vary/vary_toy")
     parser.add_argument("--image-file", type=str, required=True)
     parser.add_argument("--conv-mode", type=str, default=None)
     args = parser.parse_args()
